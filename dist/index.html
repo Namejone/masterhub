@@ -5,15 +5,586 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MH || Masetr Hub</title>
-
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/style.css">
 
 </head>
 
 <body>
 
-  <h2>This is Heading Text</h2>
+  <!-- header -->
+  <header class="header absolute left-0 top-0 w-full z-10 py-4 lg:py-8">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center">
+        <div class="w-full md:w-1/2 lg:w-2/12 xl:w-3/12">
+          <div class="logo">
+            <a href="index.html">
+              <img src="./imgs/logo.svg" alt="">
+            </a>
+          </div>
+        </div>
+        <div
+          class="lg:w-7/12 xl:w-6/12 absolute lg:relative bg-white start-0 top-0 w-[280px] h-screen lg:h-auto lg:bg-transparent p-6 pt-10 lg:p-0 -left-full lg:left-0">
+          <div class="header__nav">
+            <ul class="flex flex-col lg:flex-row items-center justify-center gap-4 gap-xl-10">
+              <li><a href="">Create Resume</a></li>
+              <li><a href="">Skillset</a></li>
+              <li><a href="">Partnered Job Board</a></li>
+              <li><a href="">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-3/12 xl:w-3/12">
+          <div class="flex items-center justify-end gap-4">
 
+            <a href="" class="btn btn-outline hidden md:inline-block">
+              Register Now
+              <span
+                class="w-10 h-10 bg-white inline-flex items-center justify-center rounded-full absolute right-1 top-1">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.5044 9.914L7.8974 18.521L6.4834 17.107L15.0894 8.5H7.5044V6.5H18.5044V17.5H16.5044V9.914Z"
+                    fill="#0066FF" />
+                </svg>
+              </span>
+            </a>
+            <button type="button" class="header__bar text-white text-2xl lg:hidden">
+              <i class="ri-menu-2-line"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header--end -->
+
+  <!-- section -->
+  <section class="hero relative bg-hero bg-no-repeat bg-top bg-cover pt-32 lg:pt-36">
+    <div class="container mx-auto px-4">
+      <div class="mx-auto max-w-[846px] text-center mb-13">
+        <div class="bg-white rounded-4xl px-6 py-2 text-primary-900 inline-flex gap-2 items-center justify-center mb-2">
+          <span>
+            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M11.507 21.5H10.105C6.52 21.5 4.728 21.5 3.614 20.365C2.5 19.23 2.5 17.403 2.5 13.75C2.5 10.097 2.5 8.27 3.614 7.135C4.728 6 6.52 6 10.105 6H13.908C17.493 6 19.286 6 20.4 7.135C21.257 8.008 21.454 9.291 21.5 11.5V13"
+                stroke="#002B6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M19.5 18.5H16.5M16.5 21.5C15.7044 21.5 14.9413 21.1839 14.3787 20.6213C13.8161 20.0587 13.5 19.2956 13.5 18.5C13.5 17.7044 13.8161 16.9413 14.3787 16.3787C14.9413 15.8161 15.7044 15.5 16.5 15.5M19.5 21.5C20.2956 21.5 21.0587 21.1839 21.6213 20.6213C22.1839 20.0587 22.5 19.2956 22.5 18.5C22.5 17.7044 22.1839 16.9413 21.6213 16.3787C21.0587 15.8161 20.2956 15.5 19.5 15.5M16.5 6L16.4 5.69C15.905 4.15 15.658 3.38 15.069 2.94C14.479 2.5 13.697 2.5 12.131 2.5H11.868C10.303 2.5 9.52 2.5 8.931 2.94C8.341 3.38 8.094 4.15 7.599 5.69L7.5 6"
+                stroke="#002B6B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+          </span>
+          Your #1 Platform for Skill Sharing
+        </div>
+        <h1
+          class="font-medium font-general-sans text-3xl leading-10 text-primary-900 xl:text-[72px] xl:leading-[86px] mb-3">
+          Showcase Your Mastery. <br> Get Connected
+        </h1>
+        <p class="mb-3">
+          Create your profile, showcase your skills, and let <br class="hidden md:block"> employers find you.
+        </p>
+        <form action="" class="w-full">
+          <div class="flex items-center max-w-[380px] md:max-w-[650px] mx-auto w-full gap-2 flex-wrap">
+            <div
+              class="flex items-center gap-2  w-full md:w-8/12 flex-wrap md:flex-nowrap md:bg-white md:border-[#EDEDED] md:rounded-4xl md:shadow-custom1 relative before:absolute before:w-[1px] before:h-[24px] before:bg-[#EDEDED] before:content-[''] before:left-1/2 ">
+              <div
+                class="w-full md:w-1/2 px-5 flex items-center gap-2 bg-white border border-[#EDEDED] custom-shadow rounded-4xl md:border-0 md:shadow-none">
+                <span class="w-6 inline-flex items-center justify-center">
+                  <svg width="19" height="21" viewBox="0 0 19 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M15.1569 14.6569C14.2202 15.5935 12.2616 17.5521 10.9138 18.8999C10.1327 19.681 8.86768 19.6814 8.08663 18.9003C6.76234 17.576 4.84159 15.6553 3.84315 14.6569C0.718951 11.5327 0.718951 6.46734 3.84315 3.34315C6.96734 0.218951 12.0327 0.218951 15.1569 3.34315C18.281 6.46734 18.281 11.5327 15.1569 14.6569Z"
+                      stroke="#002B6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path
+                      d="M12.5 9C12.5 10.6569 11.1569 12 9.5 12C7.84315 12 6.5 10.6569 6.5 9C6.5 7.34315 7.84315 6 9.5 6C11.1569 6 12.5 7.34315 12.5 9Z"
+                      stroke="#002B6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <input type="text"
+                  class="w-full border-0 font-medium text-netural-300 placeholder:text-netural-300 text-base focus:outline-0 h-12 lg:h-14"
+                  placeholder="e.g. Liverpool, USA">
+              </div>
+              <div
+                class="w-full md:w-1/2 px-5 flex items-center gap-2 bg-white border border-[#EDEDED] custom-shadow rounded-4xl md:border-0 md:shadow-none">
+                <span class="w-6 inline-flex items-center justify-center">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M19 19L13 13M15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8Z"
+                      stroke="#002B6B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+
+                </span>
+                <input type="text"
+                  class="w-full border-0 font-medium text-netural-300 placeholder:text-netural-300 text-base focus:outline-0 h-14"
+                  placeholder="e.g. UX Designer">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary w-full md:w-auto">Search</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="max-w-[1440px] mx-auto w-full">
+      <div class="swiper hero-slider">
+        <div class="swiper-wrapper">
+          <!-- slider-item -->
+          <div
+            class="swiper-slide !w-[287px] h-[338px] rounded-[20px] bg-[#F3F0D1] flex items-center justify-end overflow-hidden">
+            <img src="./imgs/avatar-1.jpg" class="w-full" alt="">
+          </div>
+          <!-- slider-item--end -->
+          <!-- slider-item -->
+          <div
+            class="swiper-slide !w-[287px] h-[338px] rounded-[20px] bg-[#F3F0D1] flex items-center justify-end overflow-hidden">
+            <img src="./imgs/avatar-2.jpg" class="" alt="">
+          </div>
+          <!-- slider-item--end -->
+          <!-- slider-item -->
+          <div
+            class="swiper-slide !w-[287px] h-[338px] rounded-[20px] bg-[#F3F0D1] flex items-center justify-end overflow-hidden">
+            <img src="./imgs/avatar-3.jpg" class="" alt="">
+          </div>
+          <!-- slider-item--end -->
+          <!-- slider-item -->
+          <div
+            class="swiper-slide !w-[287px] h-[338px] rounded-[20px] bg-[#F3F0D1] flex items-center justify-end overflow-hidden">
+            <img src="./imgs/avatar-1.jpg" class="" alt="">
+          </div>
+          <!-- slider-item--end -->
+          <!-- slider-item -->
+          <div
+            class="swiper-slide !w-[287px] h-[338px] rounded-[20px] bg-[#F3F0D1] flex items-center justify-end overflow-hidden">
+            <img src="./imgs/avatar-2.jpg" class="" alt="">
+          </div>
+          <!-- slider-item--end -->
+          <!-- slider-item -->
+          <div
+            class="swiper-slide !w-[287px] h-[338px] rounded-[20px] bg-[#F3F0D1] flex items-center justify-end overflow-hidden">
+            <img src="./imgs/avatar-3.jpg" class="" alt="">
+          </div>
+          <!-- slider-item--end -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- section--end -->
+
+  <!-- masters -->
+  <section class="section">
+    <div class="container mx-auto">
+      <div class="text-center max-w-[482px] mx-auto mb-6  md:mb-10">
+        <h2 class="fs-2 mb-3">
+          Discover the <br>
+          Emerging Masters
+        </h2>
+        <p>Find the best master for your company and boosts <br> your business 10x!</p>
+      </div>
+      <div class="block">
+        <div class="flex gap-2 items-center overflow-auto border-b border-netural-100 mb-5 md:mb-10">
+          <!-- link-item -->
+          <a href=""
+            class="inline-flex items-center gap-2 justify-center px-6 py-3 transition-all duration-500 text-base text-[#6C7787]">
+            <span class="w-6 h-6 inline-flex items-center justify-center">
+              <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4.64258 6C4.64258 4.89543 5.53801 4 6.64258 4H8.64258C9.74715 4 10.6426 4.89543 10.6426 6V8C10.6426 9.10457 9.74715 10 8.64258 10H6.64258C5.53801 10 4.64258 9.10457 4.64258 8V6Z"
+                  stroke="#6C7787" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M14.6426 6C14.6426 4.89543 15.538 4 16.6426 4H18.6426C19.7471 4 20.6426 4.89543 20.6426 6V8C20.6426 9.10457 19.7471 10 18.6426 10H16.6426C15.538 10 14.6426 9.10457 14.6426 8V6Z"
+                  stroke="#6C7787" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M4.64258 16C4.64258 14.8954 5.53801 14 6.64258 14H8.64258C9.74715 14 10.6426 14.8954 10.6426 16V18C10.6426 19.1046 9.74715 20 8.64258 20H6.64258C5.53801 20 4.64258 19.1046 4.64258 18V16Z"
+                  stroke="#6C7787" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M14.6426 16C14.6426 14.8954 15.538 14 16.6426 14H18.6426C19.7471 14 20.6426 14.8954 20.6426 16V18C20.6426 19.1046 19.7471 20 18.6426 20H16.6426C15.538 20 14.6426 19.1046 14.6426 18V16Z"
+                  stroke="#6C7787" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+            </span>
+            Developer
+          </a>
+          <!-- link-item--end -->
+
+          <!-- link-item -->
+          <a href="" class="inline-flex items-center gap-2 justify-center px-6 py-3 transition-all duration-500 text-base text-[#6C7787] border-b border-primary-500 bg-gradient-to-b from-[#E6F0FF00] to-[#E6F0FF] ;
+            ]">
+            <span class="w-6 h-6 inline-flex items-center justify-center">
+              <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M16.7139 8V16M12.7139 11V16M8.71387 14V16M6.71387 20H18.7139C19.8184 20 20.7139 19.1046 20.7139 18V6C20.7139 4.89543 19.8184 4 18.7139 4H6.71387C5.6093 4 4.71387 4.89543 4.71387 6V18C4.71387 19.1046 5.6093 20 6.71387 20Z"
+                  stroke="#6C7787" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+            </span>
+            UI Designer
+          </a>
+          <!-- link-item--end -->
+
+          <!-- link-item -->
+          <a href=""
+            class="inline-flex items-center gap-2 justify-center px-6 py-3 transition-all duration-500 text-base text-[#6C7787]">
+            <span class="w-6 h-6 inline-flex items-center justify-center">
+              <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M16.7139 8V16M12.7139 11V16M8.71387 14V16M6.71387 20H18.7139C19.8184 20 20.7139 19.1046 20.7139 18V6C20.7139 4.89543 19.8184 4 18.7139 4H6.71387C5.6093 4 4.71387 4.89543 4.71387 6V18C4.71387 19.1046 5.6093 20 6.71387 20Z"
+                  stroke="#6C7787" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+            </span>
+            Project Manager
+          </a>
+          <!-- link-item--end -->
+
+          <!-- link-item -->
+          <a href=""
+            class="inline-flex items-center gap-2 justify-center px-6 py-3 transition-all duration-500 text-base text-[#6C7787]">
+            <span class="w-6 h-6 inline-flex items-center justify-center">
+              <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M5.5 3V7M3.5 5H7.5M6.5 17V21M4.5 19H8.5M13.5 3L15.7857 9.85714L21.5 12L15.7857 14.1429L13.5 21L11.2143 14.1429L5.5 12L11.2143 9.85714L13.5 3Z"
+                  stroke="#6C7787" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+            </span>
+            Designer
+          </a>
+          <!-- link-item--end -->
+
+          <!-- link-item -->
+          <a href=""
+            class="inline-flex items-center gap-2 justify-center px-6 py-3 transition-all duration-500 text-base text-[#6C7787]">
+            <span class="w-6 h-6 inline-flex items-center justify-center">
+              <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14.3173 9.49153C14.5888 9.80439 15.0625 9.83794 15.3753 9.56648C15.6882 9.29501 15.7218 8.82132 15.4503 8.50847L14.3173 9.49153ZM10.253 14.5085C9.98153 14.1956 9.50785 14.1621 9.19499 14.4335C8.88213 14.705 8.84858 15.1787 9.12005 15.4915L10.253 14.5085ZM13.0352 7C13.0352 6.58579 12.6994 6.25 12.2852 6.25C11.8709 6.25 11.5352 6.58579 11.5352 7H13.0352ZM11.5352 17C11.5351 17.4142 11.8709 17.75 12.2851 17.75C12.6994 17.75 13.0351 17.4142 13.0352 17L11.5352 17ZM20.5352 12C20.5352 16.5563 16.8415 20.25 12.2852 20.25V21.75C17.6699 21.75 22.0352 17.3848 22.0352 12H20.5352ZM12.2852 20.25C7.72881 20.25 4.03516 16.5563 4.03516 12H2.53516C2.53516 17.3848 6.90038 21.75 12.2852 21.75V20.25ZM4.03516 12C4.03516 7.44365 7.72881 3.75 12.2852 3.75V2.25C6.90038 2.25 2.53516 6.61522 2.53516 12H4.03516ZM12.2852 3.75C16.8415 3.75 20.5352 7.44365 20.5352 12H22.0352C22.0352 6.61522 17.6699 2.25 12.2852 2.25V3.75ZM12.2852 11.25C11.5841 11.25 10.9834 11.0592 10.5799 10.7902C10.1711 10.5176 10.0352 10.2235 10.0352 10H8.53516C8.53516 10.8811 9.07083 11.5869 9.74781 12.0383C10.43 12.4931 11.3293 12.75 12.2852 12.75V11.25ZM10.0352 10C10.0352 9.7765 10.1711 9.48236 10.5799 9.20982C10.9834 8.94078 11.5841 8.75 12.2852 8.75V7.25C11.3293 7.25 10.43 7.50693 9.74781 7.96175C9.07083 8.41307 8.53516 9.11893 8.53516 10H10.0352ZM12.2852 8.75C13.2406 8.75 13.9774 9.09978 14.3173 9.49153L15.4503 8.50847C14.7528 7.70461 13.5506 7.25 12.2852 7.25V8.75ZM12.2852 12.75C12.9862 12.75 13.5869 12.9408 13.9905 13.2098C14.3993 13.4824 14.5352 13.7765 14.5352 14H16.0352C16.0352 13.1189 15.4995 12.4131 14.8225 11.9617C14.1403 11.5069 13.241 11.25 12.2852 11.25V12.75ZM11.5352 7V8H13.0352V7H11.5352ZM11.5352 16L11.5352 17L13.0352 17L13.0352 16L11.5352 16ZM12.2852 15.25C11.3297 15.25 10.5929 14.9002 10.253 14.5085L9.12005 15.4915C9.81755 16.2954 11.0198 16.75 12.2852 16.75L12.2852 15.25ZM14.5352 14C14.5352 14.2235 14.3993 14.5176 13.9905 14.7902C13.5869 15.0592 12.9862 15.25 12.2852 15.25V16.75C13.241 16.75 14.1403 16.4931 14.8225 16.0383C15.4995 15.5869 16.0352 14.8811 16.0352 14H14.5352ZM11.5352 8L11.5352 16L13.0352 16L13.0352 8L11.5352 8Z"
+                  fill="#6C7787" />
+              </svg>
+
+            </span>
+            Accountant
+          </a>
+          <!-- link-item--end -->
+
+          <!-- link-item -->
+          <a href=""
+            class="inline-flex items-center gap-2 justify-center px-6 py-3 transition-all duration-500 text-base text-[#6C7787]">
+            <span class="w-6 h-6 inline-flex items-center justify-center">
+              <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18.0713 9V12M18.0713 12V15M18.0713 12H21.0713M18.0713 12H15.0713M13.0713 7C13.0713 9.20914 11.2804 11 9.07129 11C6.86215 11 5.07129 9.20914 5.07129 7C5.07129 4.79086 6.86215 3 9.07129 3C11.2804 3 13.0713 4.79086 13.0713 7ZM3.07129 20C3.07129 16.6863 5.75758 14 9.07129 14C12.385 14 15.0713 16.6863 15.0713 20V21H3.07129V20Z"
+                  stroke="#6C7787" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+            </span>
+            Human Resource
+          </a>
+          <!-- link-item--end -->
+
+          <!-- link-item -->
+          <a href=""
+            class="inline-flex items-center gap-2 justify-center px-6 py-3 transition-all duration-500 text-base text-[#6C7787]">
+            <span class="w-6 h-6 inline-flex items-center justify-center">
+              <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.3574 11H5.35742M19.3574 11C20.462 11 21.3574 11.8954 21.3574 13V19C21.3574 20.1046 20.462 21 19.3574 21H5.35742C4.25285 21 3.35742 20.1046 3.35742 19V13C3.35742 11.8954 4.25285 11 5.35742 11M19.3574 11V9C19.3574 7.89543 18.462 7 17.3574 7M5.35742 11V9C5.35742 7.89543 6.25285 7 7.35742 7M7.35742 7V5C7.35742 3.89543 8.25285 3 9.35742 3H15.3574C16.462 3 17.3574 3.89543 17.3574 5V7M7.35742 7H17.3574"
+                  stroke="#6C7787" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+            </span>
+            Marketing
+          </a>
+          <!-- link-item--end -->
+
+        </div>
+        <div class="flex flex-wrap -mx-3 space-y-6 mb-6 md:mb-10">
+          <!-- single-master-item -->
+          <div class="px-3 w-full sm:w-1/2 md:w-4/12 lg:w-3/12">
+            <div
+              class="border border-netural-50 text-center rounded-[20px] bg-white px-6 py-6 w-full hover:border-[#8AB9FF] transition-all duration-700 hover:bg-[#E6F0FF] hover:shadow-[10px_25px_100px_0px_#002B6B40]">
+              <div class="mx-auto w-16 h-16 rounded-full relative">
+                <img src="./imgs/zrand.png" class="w-full h-full object-cover object-center rounded-full" alt="">
+                <span class="w-3 h-3 rounded-full absolute bottom-0 end-0 bg-[#65C18C]"></span>
+              </div>
+              <div class="flex justify-center items-center gap-2.5 my-1.5">
+                <span>
+                  <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.86715 5.14753L7.4909 1.87752C7.53816 1.78289 7.61086 1.70329 7.70083 1.64766C7.7908 1.59203 7.89449 1.56256 8.00027 1.56256C8.10605 1.56256 8.20974 1.59203 8.29971 1.64766C8.38969 1.70329 8.46238 1.78289 8.50965 1.87752L10.1334 5.14753L13.7634 5.67502C13.8681 5.68954 13.9666 5.73321 14.0477 5.80103C14.1288 5.86886 14.1891 5.95811 14.2219 6.0586C14.2547 6.1591 14.2586 6.26678 14.2331 6.36937C14.2076 6.47196 14.1538 6.56531 14.0778 6.63877L11.4515 9.18252L12.0715 12.7763C12.1509 13.2375 11.6634 13.5888 11.2465 13.3713L8.00027 11.6738L4.7534 13.3713C4.33715 13.5894 3.84965 13.2375 3.92902 12.7757L4.54902 9.1819L1.92277 6.63815C1.84714 6.56463 1.79364 6.47137 1.76837 6.36897C1.7431 6.26657 1.74707 6.15913 1.77981 6.05887C1.81256 5.9586 1.87278 5.86954 1.95363 5.8018C2.03447 5.73405 2.1327 5.69035 2.23715 5.67565L5.86715 5.14753Z"
+                      fill="#FFC805" />
+                  </svg>
+                </span>
+                <span class="text-netural-800 text-xs font-normal"><strong class="text-sm font-semibold">4.8</strong>
+                  (6)</span>
+              </div>
+              <div class="text-center mb-5">
+                <h4 class="text-xl font-bold leading-[30px] text-netural-900">Zrand Hobs</h4>
+                <p class="text-netural-500 text-xs ">Developer</p>
+              </div>
+              <div class="flex items-center justify-center gap-1">
+                <span
+                  class="text-xs font-medium text-netural-700 leading-4 px-3 py-1 border border-netural-50 rounded-4xl hover:bg-netural-50 transition-all duration-500">Gimp</span>
+                <span
+                  class="text-xs font-medium text-netural-700 leading-4 px-3 py-1 border border-netural-50 rounded-4xl hover:bg-netural-50 transition-all duration-500">Wordpress</span>
+              </div>
+            </div>
+          </div>
+          <!-- single-master-item--end -->
+          <!-- single-master-item -->
+          <div class="px-3 w-full sm:w-1/2 md:w-4/12 lg:w-3/12">
+            <div
+              class="border border-netural-50 text-center rounded-[20px] bg-white px-6 py-6 w-full hover:border-[#8AB9FF] transition-all duration-700 hover:bg-[#E6F0FF] hover:shadow-[10px_25px_100px_0px_#002B6B40]">
+              <div class="mx-auto w-16 h-16 rounded-full relative">
+                <img src="./imgs/dorothy-wood.png" class="w-full h-full object-cover object-center rounded-full" alt="">
+                <span class="w-3 h-3 rounded-full absolute bottom-0 end-0 bg-[#65C18C]"></span>
+              </div>
+              <div class="flex justify-center items-center gap-2.5 my-1.5">
+                <span>
+                  <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.86715 5.14753L7.4909 1.87752C7.53816 1.78289 7.61086 1.70329 7.70083 1.64766C7.7908 1.59203 7.89449 1.56256 8.00027 1.56256C8.10605 1.56256 8.20974 1.59203 8.29971 1.64766C8.38969 1.70329 8.46238 1.78289 8.50965 1.87752L10.1334 5.14753L13.7634 5.67502C13.8681 5.68954 13.9666 5.73321 14.0477 5.80103C14.1288 5.86886 14.1891 5.95811 14.2219 6.0586C14.2547 6.1591 14.2586 6.26678 14.2331 6.36937C14.2076 6.47196 14.1538 6.56531 14.0778 6.63877L11.4515 9.18252L12.0715 12.7763C12.1509 13.2375 11.6634 13.5888 11.2465 13.3713L8.00027 11.6738L4.7534 13.3713C4.33715 13.5894 3.84965 13.2375 3.92902 12.7757L4.54902 9.1819L1.92277 6.63815C1.84714 6.56463 1.79364 6.47137 1.76837 6.36897C1.7431 6.26657 1.74707 6.15913 1.77981 6.05887C1.81256 5.9586 1.87278 5.86954 1.95363 5.8018C2.03447 5.73405 2.1327 5.69035 2.23715 5.67565L5.86715 5.14753Z"
+                      fill="#FFC805" />
+                  </svg>
+                </span>
+                <span class="text-netural-800 text-xs font-normal"><strong class="text-sm font-semibold">4.8</strong>
+                  (6)</span>
+              </div>
+              <div class="text-center mb-5">
+                <h4 class="text-xl font-bold leading-[30px] text-netural-900">Dorothy Wood</h4>
+                <p class="text-netural-500 text-xs ">Developer</p>
+              </div>
+              <div class="flex items-center justify-center gap-1 flex-wrap">
+                <span
+                  class="text-xs font-medium text-netural-700 leading-4 px-3 py-1 border border-netural-50 rounded-4xl hover:bg-netural-50 transition-all duration-500">Elementor</span>
+                <span
+                  class="text-xs font-medium text-netural-700 leading-4 px-3 py-1 border border-netural-50 rounded-4xl hover:bg-netural-50 transition-all duration-500">Wix</span>
+                <span
+                  class="text-xs font-medium text-netural-700 leading-4 px-3 py-1 border border-netural-50 rounded-4xl hover:bg-netural-50 transition-all duration-500">Illustrator</span>
+              </div>
+            </div>
+          </div>
+          <!-- single-master-item--end -->
+          <!-- single-master-item -->
+          <div class="px-3 w-full sm:w-1/2 md:w-4/12 lg:w-3/12">
+            <div
+              class="border border-netural-50 text-center rounded-[20px] bg-white px-6 py-6 w-full hover:border-[#8AB9FF] transition-all duration-700 hover:bg-[#E6F0FF] hover:shadow-[10px_25px_100px_0px_#002B6B40]">
+              <div class="mx-auto w-16 h-16 rounded-full relative">
+                <img src="./imgs/timothy.png" class="w-full h-full object-cover object-center rounded-full" alt="">
+                <span class="w-3 h-3 rounded-full absolute bottom-0 end-0 bg-[#65C18C]"></span>
+              </div>
+              <div class="flex justify-center items-center gap-2.5 my-1.5">
+                <span>
+                  <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.86715 5.14753L7.4909 1.87752C7.53816 1.78289 7.61086 1.70329 7.70083 1.64766C7.7908 1.59203 7.89449 1.56256 8.00027 1.56256C8.10605 1.56256 8.20974 1.59203 8.29971 1.64766C8.38969 1.70329 8.46238 1.78289 8.50965 1.87752L10.1334 5.14753L13.7634 5.67502C13.8681 5.68954 13.9666 5.73321 14.0477 5.80103C14.1288 5.86886 14.1891 5.95811 14.2219 6.0586C14.2547 6.1591 14.2586 6.26678 14.2331 6.36937C14.2076 6.47196 14.1538 6.56531 14.0778 6.63877L11.4515 9.18252L12.0715 12.7763C12.1509 13.2375 11.6634 13.5888 11.2465 13.3713L8.00027 11.6738L4.7534 13.3713C4.33715 13.5894 3.84965 13.2375 3.92902 12.7757L4.54902 9.1819L1.92277 6.63815C1.84714 6.56463 1.79364 6.47137 1.76837 6.36897C1.7431 6.26657 1.74707 6.15913 1.77981 6.05887C1.81256 5.9586 1.87278 5.86954 1.95363 5.8018C2.03447 5.73405 2.1327 5.69035 2.23715 5.67565L5.86715 5.14753Z"
+                      fill="#FFC805" />
+                  </svg>
+                </span>
+                <span class="text-netural-800 text-xs font-normal"><strong class="text-sm font-semibold">4.8</strong>
+                  (6)</span>
+              </div>
+              <div class="text-center mb-5">
+                <h4 class="text-xl font-bold leading-[30px] text-netural-900">Timothy Baker</h4>
+                <p class="text-netural-500 text-xs ">Developer</p>
+              </div>
+              <div class="flex items-center justify-center gap-1 flex-wrap">
+                <span
+                  class="text-xs font-medium text-netural-700 leading-4 px-3 py-1 border border-netural-50 rounded-4xl hover:bg-netural-50 transition-all duration-500">Figma</span>
+                <span
+                  class="text-xs font-medium text-netural-700 leading-4 px-3 py-1 border border-netural-50 rounded-4xl hover:bg-netural-50 transition-all duration-500">Elementor</span>
+                <span
+                  class="text-xs font-medium text-netural-700 leading-4 px-3 py-1 border border-netural-50 rounded-4xl hover:bg-netural-50 transition-all duration-500">Wordpress</span>
+              </div>
+            </div>
+          </div>
+          <!-- single-master-item--end -->
+          <!-- single-master-item -->
+          <div class="px-3 w-full sm:w-1/2 md:w-4/12 lg:w-3/12">
+            <div
+              class="border border-netural-50 text-center rounded-[20px] bg-white px-6 py-6 w-full hover:border-[#8AB9FF] transition-all duration-700 hover:bg-[#E6F0FF] hover:shadow-[10px_25px_100px_0px_#002B6B40]">
+              <div class="mx-auto w-16 h-16 rounded-full relative">
+                <img src="./imgs/shane.png" class="w-full h-full object-cover object-center rounded-full" alt="">
+                <span class="w-3 h-3 rounded-full absolute bottom-0 end-0 bg-[#65C18C]"></span>
+              </div>
+              <div class="flex justify-center items-center gap-2.5 my-1.5">
+                <span>
+                  <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.86715 5.14753L7.4909 1.87752C7.53816 1.78289 7.61086 1.70329 7.70083 1.64766C7.7908 1.59203 7.89449 1.56256 8.00027 1.56256C8.10605 1.56256 8.20974 1.59203 8.29971 1.64766C8.38969 1.70329 8.46238 1.78289 8.50965 1.87752L10.1334 5.14753L13.7634 5.67502C13.8681 5.68954 13.9666 5.73321 14.0477 5.80103C14.1288 5.86886 14.1891 5.95811 14.2219 6.0586C14.2547 6.1591 14.2586 6.26678 14.2331 6.36937C14.2076 6.47196 14.1538 6.56531 14.0778 6.63877L11.4515 9.18252L12.0715 12.7763C12.1509 13.2375 11.6634 13.5888 11.2465 13.3713L8.00027 11.6738L4.7534 13.3713C4.33715 13.5894 3.84965 13.2375 3.92902 12.7757L4.54902 9.1819L1.92277 6.63815C1.84714 6.56463 1.79364 6.47137 1.76837 6.36897C1.7431 6.26657 1.74707 6.15913 1.77981 6.05887C1.81256 5.9586 1.87278 5.86954 1.95363 5.8018C2.03447 5.73405 2.1327 5.69035 2.23715 5.67565L5.86715 5.14753Z"
+                      fill="#FFC805" />
+                  </svg>
+                </span>
+                <span class="text-netural-800 text-xs font-normal"><strong class="text-sm font-semibold">4.8</strong>
+                  (6)</span>
+              </div>
+              <div class="text-center mb-5">
+                <h4 class="text-xl font-bold leading-[30px] text-netural-900">Shane Pratt</h4>
+                <p class="text-netural-500 text-xs ">Developer</p>
+              </div>
+              <div class="flex items-center justify-center gap-1 flex-wrap">
+                <span
+                  class="text-xs font-medium text-netural-700 leading-4 px-3 py-1 border border-netural-50 rounded-4xl hover:bg-netural-50 transition-all duration-500">Figma</span>
+                <span
+                  class="text-xs font-medium text-netural-700 leading-4 px-3 py-1 border border-netural-50 rounded-4xl hover:bg-netural-50 transition-all duration-500">Gimp</span>
+                <span
+                  class="text-xs font-medium text-netural-700 leading-4 px-3 py-1 border border-netural-50 rounded-4xl hover:bg-netural-50 transition-all duration-500">Wordpress</span>
+              </div>
+            </div>
+          </div>
+          <!-- single-master-item--end -->
+          <!-- single-master-item -->
+          <div class="px-3 w-full sm:w-1/2 md:w-4/12 lg:w-3/12">
+            <div
+              class="border border-netural-50 text-center rounded-[20px] bg-white px-6 py-6 w-full hover:border-[#8AB9FF] transition-all duration-700 hover:bg-[#E6F0FF] hover:shadow-[10px_25px_100px_0px_#002B6B40]">
+              <div class="mx-auto w-16 h-16 rounded-full relative">
+                <img src="./imgs/frances.png" class="w-full h-full object-cover object-center rounded-full" alt="">
+                <span class="w-3 h-3 rounded-full absolute bottom-0 end-0 bg-[#65C18C]"></span>
+              </div>
+              <div class="flex justify-center items-center gap-2.5 my-1.5">
+                <span>
+                  <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.86715 5.14753L7.4909 1.87752C7.53816 1.78289 7.61086 1.70329 7.70083 1.64766C7.7908 1.59203 7.89449 1.56256 8.00027 1.56256C8.10605 1.56256 8.20974 1.59203 8.29971 1.64766C8.38969 1.70329 8.46238 1.78289 8.50965 1.87752L10.1334 5.14753L13.7634 5.67502C13.8681 5.68954 13.9666 5.73321 14.0477 5.80103C14.1288 5.86886 14.1891 5.95811 14.2219 6.0586C14.2547 6.1591 14.2586 6.26678 14.2331 6.36937C14.2076 6.47196 14.1538 6.56531 14.0778 6.63877L11.4515 9.18252L12.0715 12.7763C12.1509 13.2375 11.6634 13.5888 11.2465 13.3713L8.00027 11.6738L4.7534 13.3713C4.33715 13.5894 3.84965 13.2375 3.92902 12.7757L4.54902 9.1819L1.92277 6.63815C1.84714 6.56463 1.79364 6.47137 1.76837 6.36897C1.7431 6.26657 1.74707 6.15913 1.77981 6.05887C1.81256 5.9586 1.87278 5.86954 1.95363 5.8018C2.03447 5.73405 2.1327 5.69035 2.23715 5.67565L5.86715 5.14753Z"
+                      fill="#FFC805" />
+                  </svg>
+                </span>
+                <span class="text-netural-800 text-xs font-normal"><strong class="text-sm font-semibold">4.8</strong>
+                  (6)</span>
+              </div>
+              <div class="text-center mb-5">
+                <h4 class="text-xl font-bold leading-[30px] text-netural-900">Frances Washing</h4>
+                <p class="text-netural-500 text-xs ">Developer</p>
+              </div>
+              <div class="flex items-center justify-center gap-1 flex-wrap">
+                <span
+                  class="text-xs font-medium text-netural-700 leading-4 px-3 py-1 border border-netural-50 rounded-4xl hover:bg-netural-50 transition-all duration-500">Wordpress</span>
+                <span
+                  class="text-xs font-medium text-netural-700 leading-4 px-3 py-1 border border-netural-50 rounded-4xl hover:bg-netural-50 transition-all duration-500">Gimp</span>
+                <span
+                  class="text-xs font-medium text-netural-700 leading-4 px-3 py-1 border border-netural-50 rounded-4xl hover:bg-netural-50 transition-all duration-500">Figma</span>
+              </div>
+            </div>
+          </div>
+          <!-- single-master-item--end -->
+          <!-- single-master-item -->
+          <div class="px-3 w-full sm:w-1/2 md:w-4/12 lg:w-3/12">
+            <div
+              class="border border-netural-50 text-center rounded-[20px] bg-white px-6 py-6 w-full hover:border-[#8AB9FF] transition-all duration-700 hover:bg-[#E6F0FF] hover:shadow-[10px_25px_100px_0px_#002B6B40]">
+              <div class="mx-auto w-16 h-16 rounded-full relative">
+                <img src="./imgs/jason.png" class="w-full h-full object-cover object-center rounded-full" alt="">
+                <span class="w-3 h-3 rounded-full absolute bottom-0 end-0 bg-[#65C18C]"></span>
+              </div>
+              <div class="flex justify-center items-center gap-2.5 my-1.5">
+                <span>
+                  <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.86715 5.14753L7.4909 1.87752C7.53816 1.78289 7.61086 1.70329 7.70083 1.64766C7.7908 1.59203 7.89449 1.56256 8.00027 1.56256C8.10605 1.56256 8.20974 1.59203 8.29971 1.64766C8.38969 1.70329 8.46238 1.78289 8.50965 1.87752L10.1334 5.14753L13.7634 5.67502C13.8681 5.68954 13.9666 5.73321 14.0477 5.80103C14.1288 5.86886 14.1891 5.95811 14.2219 6.0586C14.2547 6.1591 14.2586 6.26678 14.2331 6.36937C14.2076 6.47196 14.1538 6.56531 14.0778 6.63877L11.4515 9.18252L12.0715 12.7763C12.1509 13.2375 11.6634 13.5888 11.2465 13.3713L8.00027 11.6738L4.7534 13.3713C4.33715 13.5894 3.84965 13.2375 3.92902 12.7757L4.54902 9.1819L1.92277 6.63815C1.84714 6.56463 1.79364 6.47137 1.76837 6.36897C1.7431 6.26657 1.74707 6.15913 1.77981 6.05887C1.81256 5.9586 1.87278 5.86954 1.95363 5.8018C2.03447 5.73405 2.1327 5.69035 2.23715 5.67565L5.86715 5.14753Z"
+                      fill="#FFC805" />
+                  </svg>
+                </span>
+                <span class="text-netural-800 text-xs font-normal"><strong class="text-sm font-semibold">4.8</strong>
+                  (6)</span>
+              </div>
+              <div class="text-center mb-5">
+                <h4 class="text-xl font-bold leading-[30px] text-netural-900">Jason Bell</h4>
+                <p class="text-netural-500 text-xs ">Developer</p>
+              </div>
+              <div class="flex items-center justify-center gap-1 flex-wrap">
+                <span
+                  class="text-xs font-medium text-netural-700 leading-4 px-3 py-1 border border-netural-50 rounded-4xl hover:bg-netural-50 transition-all duration-500">Elementor</span>
+                <span
+                  class="text-xs font-medium text-netural-700 leading-4 px-3 py-1 border border-netural-50 rounded-4xl hover:bg-netural-50 transition-all duration-500">Wordpress</span>
+              </div>
+            </div>
+          </div>
+          <!-- single-master-item--end -->
+          <!-- single-master-item -->
+          <div class="px-3 w-full sm:w-1/2 md:w-4/12 lg:w-3/12">
+            <div
+              class="border border-netural-50 text-center rounded-[20px] bg-white px-6 py-6 w-full hover:border-[#8AB9FF] transition-all duration-700 hover:bg-[#E6F0FF] hover:shadow-[10px_25px_100px_0px_#002B6B40]">
+              <div class="mx-auto w-16 h-16 rounded-full relative">
+                <img src="./imgs/kathryn.png" class="w-full h-full object-cover object-center rounded-full" alt="">
+                <span class="w-3 h-3 rounded-full absolute bottom-0 end-0 bg-[#65C18C]"></span>
+              </div>
+              <div class="flex justify-center items-center gap-2.5 my-1.5">
+                <span>
+                  <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.86715 5.14753L7.4909 1.87752C7.53816 1.78289 7.61086 1.70329 7.70083 1.64766C7.7908 1.59203 7.89449 1.56256 8.00027 1.56256C8.10605 1.56256 8.20974 1.59203 8.29971 1.64766C8.38969 1.70329 8.46238 1.78289 8.50965 1.87752L10.1334 5.14753L13.7634 5.67502C13.8681 5.68954 13.9666 5.73321 14.0477 5.80103C14.1288 5.86886 14.1891 5.95811 14.2219 6.0586C14.2547 6.1591 14.2586 6.26678 14.2331 6.36937C14.2076 6.47196 14.1538 6.56531 14.0778 6.63877L11.4515 9.18252L12.0715 12.7763C12.1509 13.2375 11.6634 13.5888 11.2465 13.3713L8.00027 11.6738L4.7534 13.3713C4.33715 13.5894 3.84965 13.2375 3.92902 12.7757L4.54902 9.1819L1.92277 6.63815C1.84714 6.56463 1.79364 6.47137 1.76837 6.36897C1.7431 6.26657 1.74707 6.15913 1.77981 6.05887C1.81256 5.9586 1.87278 5.86954 1.95363 5.8018C2.03447 5.73405 2.1327 5.69035 2.23715 5.67565L5.86715 5.14753Z"
+                      fill="#FFC805" />
+                  </svg>
+                </span>
+                <span class="text-netural-800 text-xs font-normal"><strong class="text-sm font-semibold">4.8</strong>
+                  (6)</span>
+              </div>
+              <div class="text-center mb-5">
+                <h4 class="text-xl font-bold leading-[30px] text-netural-900">Kathryn Sanchez</h4>
+                <p class="text-netural-500 text-xs ">Developer</p>
+              </div>
+              <div class="flex items-center justify-center gap-1">
+                <span
+                  class="text-xs font-medium text-netural-700 leading-4 px-3 py-1 border border-netural-50 rounded-4xl hover:bg-netural-50 transition-all duration-500">Gimp</span>
+                <span
+                  class="text-xs font-medium text-netural-700 leading-4 px-3 py-1 border border-netural-50 rounded-4xl hover:bg-netural-50 transition-all duration-500">Wordpress</span>
+              </div>
+            </div>
+          </div>
+          <!-- single-master-item--end -->
+          <!-- single-master-item -->
+          <div class="px-3 w-full sm:w-1/2 md:w-4/12 lg:w-3/12">
+            <div
+              class="border border-netural-50 text-center rounded-[20px] bg-white px-6 py-6 w-full hover:border-[#8AB9FF] transition-all duration-700 hover:bg-[#E6F0FF] hover:shadow-[10px_25px_100px_0px_#002B6B40]">
+              <div class="mx-auto w-16 h-16 rounded-full relative">
+                <img src="./imgs/jaime.png" class="w-full h-full object-cover object-center rounded-full" alt="">
+                <span class="w-3 h-3 rounded-full absolute bottom-0 end-0 bg-[#65C18C]"></span>
+              </div>
+              <div class="flex justify-center items-center gap-2.5 my-1.5">
+                <span>
+                  <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.86715 5.14753L7.4909 1.87752C7.53816 1.78289 7.61086 1.70329 7.70083 1.64766C7.7908 1.59203 7.89449 1.56256 8.00027 1.56256C8.10605 1.56256 8.20974 1.59203 8.29971 1.64766C8.38969 1.70329 8.46238 1.78289 8.50965 1.87752L10.1334 5.14753L13.7634 5.67502C13.8681 5.68954 13.9666 5.73321 14.0477 5.80103C14.1288 5.86886 14.1891 5.95811 14.2219 6.0586C14.2547 6.1591 14.2586 6.26678 14.2331 6.36937C14.2076 6.47196 14.1538 6.56531 14.0778 6.63877L11.4515 9.18252L12.0715 12.7763C12.1509 13.2375 11.6634 13.5888 11.2465 13.3713L8.00027 11.6738L4.7534 13.3713C4.33715 13.5894 3.84965 13.2375 3.92902 12.7757L4.54902 9.1819L1.92277 6.63815C1.84714 6.56463 1.79364 6.47137 1.76837 6.36897C1.7431 6.26657 1.74707 6.15913 1.77981 6.05887C1.81256 5.9586 1.87278 5.86954 1.95363 5.8018C2.03447 5.73405 2.1327 5.69035 2.23715 5.67565L5.86715 5.14753Z"
+                      fill="#FFC805" />
+                  </svg>
+                </span>
+                <span class="text-netural-800 text-xs font-normal"><strong class="text-sm font-semibold">4.8</strong>
+                  (6)</span>
+              </div>
+              <div class="text-center mb-5">
+                <h4 class="text-xl font-bold leading-[30px] text-netural-900">Jaime Strickland</h4>
+                <p class="text-netural-500 text-xs ">Developer</p>
+              </div>
+              <div class="flex items-center justify-center gap-1 flex-wrap">
+                <span
+                  class="text-xs font-medium text-netural-700 leading-4 px-3 py-1 border border-netural-50 rounded-4xl hover:bg-netural-50 transition-all duration-500">Figma</span>
+                <span
+                  class="text-xs font-medium text-netural-700 leading-4 px-3 py-1 border border-netural-50 rounded-4xl hover:bg-netural-50 transition-all duration-500">Gimp</span>
+                <span
+                  class="text-xs font-medium text-netural-700 leading-4 px-3 py-1 border border-netural-50 rounded-4xl hover:bg-netural-50 transition-all duration-500">Wordpress</span>
+              </div>
+            </div>
+          </div>
+          <!-- single-master-item--end -->
+        </div>
+        <div class="text-center">
+          <a href="" class="btn btn-outline--primary">
+            View All
+            <span
+              class="w-10 h-10 bg-primary-500 inline-flex items-center justify-center rounded-full absolute right-1 top-1">
+              <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.5044 9.914L7.8974 18.521L6.4834 17.107L15.0894 8.5H7.5044V6.5H18.5044V17.5H16.5044V9.914Z"
+                  fill="#fff" />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- masters--end -->
+
+
+  <!-- scripts -->
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/scripts.js"></script>
 </body>
 
 </html>

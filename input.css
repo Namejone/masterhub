@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@font-face {
+  font-family: 'General Sans';
+  src: url('../fonts/GeneralSans-Regular.woff2') format('woff2'),
+    url('../fonts/GeneralSans-Regular.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('../fonts/GeneralSans-Medium.woff2') format('woff2'),
+    url('../fonts/GeneralSans-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('../fonts/GeneralSans-Light.woff2') format('woff2'),
+    url('../fonts/GeneralSans-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('../fonts/GeneralSans-Bold.woff2') format('woff2'),
+    url('../fonts/GeneralSans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('../fonts/GeneralSans-Semibold.woff2') format('woff2'),
+    url('../fonts/GeneralSans-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import 'tailwindcss';
+@theme {
+  --font-*: initial;
+  --font-general-sans: 'General Sans', serif;
+  --font-manrope: 'Manrope', serif;
+  --default-font-family: var(--font-manrope);
+  --color-*: initial;
+  --color-primary-50: #e6f0ff;
+  --color-primary-100: #b0d0ff;
+  --color-primary-200: #8ab9ff;
+  --color-primary-300: #5498ff;
+  --color-primary-400: #3385ff;
+  --color-primary-500: #0066ff;
+  --color-primary-600: #005de8;
+  --color-primary-700: #0048b5;
+  --color-primary-800: #00388c;
+  --color-primary-900: #002b6b;
+  --color-netural-50: #edeef0;
+  --color-netural-100: #c6cad1;
+  --color-netural-200: #aab1ba;
+  --color-netural-300: #848d9b;
+  --color-netural-400: #6c7787;
+  --color-netural-500: #475569;
+  --color-netural-600: #414d60;
+  --color-netural-700: #323c4b;
+  --color-netural-800: #272f3a;
+  --color-netural-900: #1e242c;
+  --color-white: #fff;
+  --color-black: #000;
+
+  --breakpoint-*: initial;
+  --spacing: 0.25rem;
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 79.5rem;
+
+  --shadow-custom1: 8px 8px 56px 0px #0000000d;
+
+  --bg-hero: url('../imgs/hero-bg.png');
+}
+
+@layer base {
+  body {
+    @apply text-base leading-6 text-netural-600 font-normal font-manrope;
+  }
+  .fs-2 {
+    @apply text-3xl leading-[1.3] md:text-4xl lg:text-5xl xl:text-[56px] xl:leading-[67px] font-medium text-netural-900;
+  }
+}
+
+@layer utilities {
+  .bg-hero {
+    background-image: var(--bg-hero);
+  }
+  .custom-shadow1 {
+    box-shadow: var(--shadow-custom1);
+  }
+  .section {
+    @apply py-10 md:py-16 xl:py-22;
+  }
+  .bg-custom-gradient {
+    background: linear-gradient(
+      180deg,
+      rgba(230, 240, 255, 0) 49.76%,
+      #e6f0ff 100%
+    );
+  }
+}
+
+@layer components {
+  .btn {
+    @apply text-base leading-6 font-bold font-manrope px-12 py-[13px] border transition-all duration-300 rounded-4xl inline-block relative;
+  }
+  .btn-outline {
+    @apply border-white pe-[60px] py-3 ps-6 text-white hover:bg-primary-400 hover:border-primary-400;
+  }
+  .btn-outline--primary {
+    @apply border-primary-500 pe-[60px] py-3 ps-6 text-primary-500 hover:bg-primary-700 hover:border-primary-700 hover:text-white;
+  }
+  .btn-primary {
+    @apply text-white  border-primary-600  bg-primary-600 hover:bg-transparent hover:text-primary-600 hover:border-primary-600;
+  }
+}
