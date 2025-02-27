@@ -84,6 +84,7 @@
   --shadow-custom1: 8px 8px 56px 0px #0000000d;
 
   --bg-hero: url('../imgs/hero-bg.png');
+  --bg-newsletter: url('../imgs/newsletter-bg.png');
 }
 
 @layer base {
@@ -98,6 +99,9 @@
 @layer utilities {
   .bg-hero {
     background-image: var(--bg-hero);
+  }
+  .bg-newsletter {
+    background-image: var(--bg-newsletter);
   }
   .custom-shadow1 {
     box-shadow: var(--shadow-custom1);
