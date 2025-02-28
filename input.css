@@ -85,6 +85,7 @@
 
   --bg-hero: url('../imgs/hero-bg.png');
   --bg-newsletter: url('../imgs/newsletter-bg.png');
+  --bg-footer: url('../imgs/footer-bg.png');
 }
 
 @layer base {
@@ -102,6 +103,9 @@
   }
   .bg-newsletter {
     background-image: var(--bg-newsletter);
+  }
+  .bg-footer {
+    background-image: var(--bg-footer);
   }
   .custom-shadow1 {
     box-shadow: var(--shadow-custom1);
